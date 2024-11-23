@@ -1,0 +1,87 @@
+.outer-container{
+  background-color: rgb(8, 250, 238);
+  height: 100vh;
+  width: 55vw;
+  margin-top: 20px;
+  margin-left: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgb(57, 223, 7), rgb(240, 6, 142));
+  animation: gradientAnimation 8s ease infinite;
+  background-size: 200% 200%;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.container{
+  height: 350px;
+  width: 350px;
+  position: relative;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  animation:moveCircle 4s ease-in-out infinite;
+  background-size: 200% 200%;
+}
+
+
+.circle{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: linear-gradient(to right, red, blue);
+  animation: gradientAnimation 8s ease infinite, moveCircle 4s ease-in-out infinite;
+  background-size: 200% 200%;
+  position: absolute;
+}
+@keyframes gradientAnimation{
+
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes moveCircle {
+  0% {
+    transform: translate(0, 0); 
+  }
+  10% {
+    transform: translate(75px, 0);
+  }
+  20% {
+    transform: translate(75px, 75px); 
+  }
+  30% {
+    transform: translate(0, 75px);
+  }
+  40% {
+    transform: translate(-75px, 75px); 
+  }
+  50% {
+    transform: translate(-75px, 0); 
+  }
+  60% {
+    transform: translate(-75px, -75px); 
+  }
+  70% {
+    transform: translate(0, -75px); 
+  }
+  80% {
+    transform: translate(75px, -75px);
+  }
+  90% {
+    transform: translate(75px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
